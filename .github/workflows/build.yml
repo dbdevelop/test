@@ -24,7 +24,7 @@ jobs:
                   if: ${{ github.ref == 'refs/heads/main'  }}
                   run: |
                        echo "REALM_APP_ID=application-1-wasyt" >> $GITHUB_ENV
-                       cd test/environments
+                       cd environments
                        printf '{\n      "values": {"databaseName": "Cluster0"}\n}' > testing.json
                        cd ..
                        sed -i txt 's/{/{ "environment": "testing",/' realm_config.json
@@ -38,7 +38,7 @@ jobs:
                 - name: "Push"
                   if: ${{ env.REALM_APP_ID }}
                   run: |
-                       cd test/environments
+                       cd environments
                        realm-cli push --remote="${{ env.REALM_APP_ID }}" -y
 
                   
