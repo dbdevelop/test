@@ -7,7 +7,7 @@
         "_partition": {
             "bsonType": "string"
         },
-        "isComplete": {
+        "isComplet": {
             "bsonType": "boolean"
         },
         "summary": {
