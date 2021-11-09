@@ -17,7 +17,7 @@
     "required": [
         "_id",
         "summary",
-        "isComplete",
+        "isComplet",
         "_partition"
     ],
     "title": "Task"
