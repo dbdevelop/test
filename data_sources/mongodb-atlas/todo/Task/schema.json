@@ -7,17 +7,20 @@
         "_partition": {
             "bsonType": "string"
         },
-        "isComplet": {
+        "isComplete": {
             "bsonType": "boolean"
         },
         "summary": {
             "bsonType": "string"
         }
+	"test": {
+	    "bsonType": "string"
+	}
     },
     "required": [
         "_id",
         "summary",
-        "isComplet",
+        "isComplete",
         "_partition"
     ],
     "title": "Task"
