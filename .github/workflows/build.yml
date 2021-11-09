@@ -27,7 +27,7 @@ jobs:
                        cd environments
                        printf '{\n      "values": {"databaseName": "Cluster0"}\n}' > testing.json
                        cd
-                       sed -i txt 's/{/{ "environment": "testing",/' realm_config.json 
+                       sed -i 's/{/{ "environment": "testing",/' realm_config.json 
 
                 - name: "Auth"
                   run: |
