@@ -4,7 +4,7 @@ name: Realm test
 on:
         push:
                 branches:
-                - master
+                - main
 
 
 jobs:
@@ -21,13 +21,13 @@ jobs:
 
 
                 - name: "master branch"
-                  if: ${{ github.ref == 'refs/heads/master'  }}
+                  if: ${{ github.ref == 'refs/heads/main'  }}
                   run: |
                        echo "REALM_APP_ID=application-1-wasyt" >> $GITHUB_ENV
                        cd test/environments
-                  printf '{\n      "values": {"databaseName": "Cluster0"}\n}' > testing.json
-                  cd ..
-                  sed -i txt 's/{/{ "environment": "testing",/' realm_config.json
+                       printf '{\n      "values": {"databaseName": "Cluster0"}\n}' > testing.json
+                       cd ..
+                       sed -i txt 's/{/{ "environment": "testing",/' realm_config.json
 
                 - name: "Auth"
                   run: |
