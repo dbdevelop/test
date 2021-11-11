@@ -25,9 +25,9 @@ jobs:
                   run: |
                        echo "REALM_APP_ID=application-1-wasyt" >> $GITHUB_ENV
                        cd environments
-                       printf '{\n      "values": {"databaseName": "Cluster0"}\n}' > testing.json
+                       printf '{\n      "values": {"databaseName": "Cluster0"}\n}' > development.json
                        cd ..
-                       sed -i 's/{/{ "environment": "testing",/' realm_config.json 
+                       sed -i 's/{/{ "environment": "development",/' realm_config.json 
 
                 - name: "Auth"
                   run: |
