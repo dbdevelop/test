@@ -1,5 +1,5 @@
 {
-    "state": "enabled",
+    "state": "disabled",
     "database_name": "todo",
     "partition": {
         "key": "_partition",
