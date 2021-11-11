@@ -14,7 +14,7 @@
             "bsonType": "string"
         },
 	"test": {
-	    "bsonType": "string"
+	    "bsonType": "boolean"
 	}
     },
     "required": [
